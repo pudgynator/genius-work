@@ -1,0 +1,80 @@
+body {
+    font-family: Poppins, Arial, sans-serif;
+    color: var(--primary-dark-color);
+    background-color: var(--primary-light-color);
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+ul{
+    list-style-type: none;
+}
+
+
+:root {
+    --primary-dark-color: Black;
+    --brand-color-light: rgba(129, 155, 87, 1);
+    --brand-color-dark: rgba(70, 89, 41, 1); 
+    --primary-light-color: rgba(250, 244, 234, 1);
+}
+
+.button {
+    width: 238px;
+    height: 59px;
+    border-radius: 8px;
+    border: 2px solid var(--brand-color-light);
+    background: var(--brand-color-light);
+    color: var(--primary-light-color);
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.button:hover {
+    background: transparent;
+    color: var(--brand-color-dark);
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--primary-light-color);
+    font-size: 18px;
+}
+
+.header-link:hover {
+    color: var(--brand-color-light);
+    font-weight: bold;
+}
+   
+.hero-title {
+    color: var(--primary-light-color);
+}
+
+.hero-title .accent {
+    color: var(--brand-color-light);
+}
+
+.traditions-section .accent {
+    color: var(--brand-color-light);
+    font-weight: bold;
+}
+
+.advantages-list {
+    padding: 16px 112px 16px 112px;
+    display: flex;
+    justify-content: space-between;
+    color: var(--primary-light-color);
+    background-color: var(--brand-color-light);
+}
+
+.section-title{
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 84px;
+    letter-spacing: 0%;
+
+}
+
+.section-title .accent {
+    color: var(--brand-color-dark);
+}
