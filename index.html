@@ -25,7 +25,7 @@
                         <li><a class="header-link" href="#contact-section">Контакти</a></li>
                     </ul>
                 </nav>
-                <button class="button" type="button">
+                <button class="button modal-btn-open" type="button">
                     Замовити дзвінок
                 </button>
             </div>
@@ -69,7 +69,7 @@
         </section>
         <section class="section" id="chefs-section">
             <div class="container">
-                <h2 class="chefs-title section-title centered" >Наші найкращі <span class="accent">шеф-кухарі</span></h2>
+                <h2 class="chefs-title section-title centered" >Наші найкращі <br/> <span class="accent">шеф-кухарі</span></h2>
                 <ul class="chefs-list">
                      <li class="chef-item">
                         <article class="chef-article">
@@ -92,8 +92,8 @@
                                 <h3 class="chef-title">Влад</h3>
                                 <div class="chef-text">
                                     <p>Привіт, я Влад!</p>
-                                    <p>Мій кодитерський стаж вже 18 років. SHOP BEKERY - це наша любов, з якою ми ділимось кожен раз з Вами через нашу випічку!</p>
-                                    <p>Я  зроблю для вас унікальну начинку на будь який смак!</p>
+                                    <p>Мій кондитерський стаж вже 18 років. SHOP BEKERY - це наша любов, з якою ми ділимось кожен раз з Вами через нашу випічку!</p>
+                                    <p>Я зроблю для вас унікальну начинку на будь який смак!</p>
                                 </div>
                              </div>
                         </article>
@@ -116,7 +116,7 @@
                                 <h3 class="format-title" lang="en">Walrus</h3>
                                 <div class="format-text">
                                     <p>Площа: до 120 м2</p>
-                                    <p> Меню: розширене меню </p>
+                                    <p>Меню: розширене меню </p>
                                     <p>Штат: 2 продавці-касири, 2 пекарі, 2 помічники пекаря, 2 офіціанти-різнороби</p>
                                     <p>Посадкові місця: є</p>
                                 </div>
@@ -147,7 +147,7 @@
                             </article> 
                         </li>
                     </ul>
-                    <button class ="carousel-button" type="button">
+                    <button class ="carousel-button next" type="button">
                         <svg width="16" height="16">
                             <use href="./images/icons.svg#icon-arrow"></use>
                         </svg>  
@@ -212,20 +212,22 @@
                                 Україна, м. Київ, вул. Січових Стрільців 54
                             </a>
                         </li>
-                        <li>
-                            <a href="https://www.facebook.com/" target="_blank" >
-                                <svg class="address-icon" width="32" height="32">
-                                    <use href="./images/icons.svg#icon-facebook-logo"></use>
-                                </svg>
-                            </a>
-                        </li> 
-                        <li>
-                            <a href="https://www.instagram.com/" target="_blank" >
-                                <svg class="address-icon" width="32" height="32">
-                                    <use href="./images/icons.svg#icon-instagram-logo"></use>
-                                </svg>
-                            </a>
-                        </li> 
+                        <div class="social-list">
+                            <li>
+                                <a href="https://www.facebook.com/" target="_blank" >
+                                    <svg class="address-icon" width="32" height="32">
+                                        <use href="./images/icons.svg#icon-facebook-logo"></use>
+                                    </svg>
+                                </a>
+                            </li> 
+                            <li>
+                                <a href="https://www.instagram.com/" target="_blank" >
+                                    <svg class="address-icon" width="32" height="32">
+                                        <use href="./images/icons.svg#icon-instagram-logo"></use>
+                                    </svg>
+                                </a>
+                            </li> 
+                        </div>
                     </ul>
         
                     <div class="address-info">
@@ -239,8 +241,15 @@
                 </address>
             </div>
         </div>
-    </footer>    
+    </footer>
+    
+    <div class="backdrop is-hidden">
+        <div class="modal">
+            <button class="modal-btn-close" type="button">Close</button>
+            
+        </div>
+    </div>
 
-    <script src="script.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
