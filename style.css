@@ -72,7 +72,11 @@ h1,h2,h3,h4,h5,h6, p{
 }
 
 .header {
-
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding-top: 32px;
 }
 
 .header-container {
@@ -100,6 +104,7 @@ h1,h2,h3,h4,h5,h6, p{
     text-decoration: none;
     line-height: 1.5;
     color: var(--primary-light-color);
+    transition: color 0.3s ease-in-out;
 }
 
 .header-link:hover {
@@ -129,8 +134,7 @@ h1,h2,h3,h4,h5,h6, p{
 /* MAIN */
 .hero-section {
     padding: 272px 0px;
-    /* background: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%); */
-    background-image: url(./images/bgc-main.png);
+    background-image: linear-gradient(102.76deg, rgba(18, 18, 17, 0.78) 2.03%, rgba(18, 18, 17, 0.6) 58.46%, rgba(18, 18, 17, 0) 90.36%), url(./images/bgc-main.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -214,17 +218,25 @@ h1,h2,h3,h4,h5,h6, p{
 }
 
 .chefs-title {
-    text-align: center;
-    max-width: 520px;
     margin: 0 auto 80px auto;
+    position: relative;
 }
 
 .chefs-title::before,
 .chefs-title::after  {
     content: '';
-    display: block;
+    position: absolute;
+    bottom: 24px;
     width: 352px;
     border: 2px solid var(--brand-color-light);
+}
+
+.chefs-title::before {
+    left: 0;
+}
+
+.chefs-title::after {
+    right: 0;
 }
 
 .chefs-list {
@@ -244,10 +256,6 @@ h1,h2,h3,h4,h5,h6, p{
 
 .chef-text p{
     margin-bottom: 24px;
-}
-
-.chef-text p{
-    margin-bottom: 0;
 }
 
 .chef-img {
@@ -305,6 +313,11 @@ h1,h2,h3,h4,h5,h6, p{
     height: 444px;
     border: 1px solid rgb(149, 91, 91);
     border-radius: 16px;
+    transition: scale 0.3s ease-in-out;
+}
+
+.format-article:hover {
+    scale: 1.05;
 }
 
 .formats-item {
@@ -314,6 +327,10 @@ h1,h2,h3,h4,h5,h6, p{
 .format-text {
     font-size: 14px;
     font-weight: 300;
+}
+
+.carousel-button.next {
+    transform: rotate(180deg);
 }
 
 /* CONTACTS */
@@ -399,6 +416,32 @@ h1,h2,h3,h4,h5,h6, p{
     background-size: cover;
     background-size: center;
     padding: 32px 0;
+    position: relative;
+}
+
+.footer::before,
+.footer::after {
+    position: absolute;
+    content: '';
+    background-repeat: no-repeat;
+    bottom: 0;
+}
+
+.footer::before {
+    background-image: url(./images/bread-small.png);
+    width: 180px;
+    height: 120px;
+    left: 0;
+    rotate: 10.4 deg;
+}
+
+.footer::after {
+    background-image: url(./images/bread-large.png);
+    width: 380px;
+    height: 187px;
+    right: 0;
+    rotate: 24.67 deg;
+
 }
 
 .footer-container {
@@ -417,10 +460,53 @@ h1,h2,h3,h4,h5,h6, p{
     flex-grow: 1;
     
 }
-
+.social-list {
+    display: flex;
+    gap: 22px;
+    justify-content: flex-start;
+}
 .address-info, .address-list {
     flex-grow: 1;
 }
 
+/* modal */
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
 
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.modal {
+    width: 100%;
+    max-width: 880px;
+    height: 100%;
+    max-height: 880px;
+    background-color: var(--primary-light-color);
+    border-radius: 32px;
+    position: relative;
+}
+.modal-btn-close {
+    position: absolute;
+    right: 40px;
+    top: 40px;
+
+}
+
+.modal-text.colored {
+    color: var(--brand-color-dark);
+}
 
